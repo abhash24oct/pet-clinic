@@ -2,12 +2,13 @@ package abhash.springframework.petclinic.model;
 
 import lombok.*;
 
-@Data
+import javax.persistence.MappedSuperclass;
+
+
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Person {
+@MappedSuperclass
+public class Person  extends BaseEntity{
 
     private  String firstName;
     private String lastName;

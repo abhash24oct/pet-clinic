@@ -2,11 +2,14 @@ package abhash.springframework.petclinic.model;
 
 import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
 @Getter
 @Setter
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class PetType {
+@Entity
+@Table(name = "type")
+public class PetType extends BaseEntity{
     private String name;
 }
